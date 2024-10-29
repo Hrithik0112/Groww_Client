@@ -1,7 +1,7 @@
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import LoginScreen from "../screens/LoginScreen";
-import HomeScreen from "../screens/HomeScreen";
+import LoginScreen from "../screens/auth/LoginScreen";
+import HomeScreen from "../screens/dashboard/HomeScreen";
 import { navigationRef } from "../utils/NavigationUtil";
 import { useCustomTheme } from "../utils/Theme";
 
@@ -24,9 +24,9 @@ export default function Navigation() {
   };
   return (
     <NavigationContainer ref={navigationRef} theme={MyTheme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="LoginScreen">
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
