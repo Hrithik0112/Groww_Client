@@ -19,10 +19,10 @@ export default function LoginScreen() {
     <CustomSafeAreaView>
       <View style={styles.container}>
         <CustomText variant="h1" fontFamily={FONTS.Medium}>
-          Together We Grow
+          Together We Grow.
         </CustomText>
         <CustomText variant="h7" fontFamily={FONTS.Bold} style={styles.subtext}>
-          Invest . Pay . Loans
+          Invest • Pay • Loans
         </CustomText>
         <View style={styles.imgContainer}>
           <Image source={theme === "dark" ? LoginImageDark : LoginImageLight} style={styles.img} />
